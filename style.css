@@ -1,0 +1,76 @@
+    body {
+            font-family: Algerian, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3498db;
+            /* blue background */
+            color: #3498db;
+            background-image: url('https://www.shutterstock.com/image-photo/blurred-background-interior-modern-hospital-600nw-1919329166.jpg');
+            /* Path to your hospital background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+    }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            margin-top: 50px;
+        }
+
+        .buttons button {
+            background-color: #2980b9;
+            /* darker blue for buttons */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #1e679b;
+            /* darker shade on hover */
+        }
+
+        .login-container {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #1e679b;
+        }

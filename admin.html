@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointment System</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('https://img.freepik.com/free-photo/blur-hospital_1203-7974.jpg'); /* Specify the path to your background image */
+        background-size: cover;
+        background-position: center;
+    }
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+    }
+    .button {
+        width: 45%;
+        height: 300px;
+        background-color: rgba(52, 152, 219, 0.8); /* Add transparency to the background color */
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 300px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .button:hover {
+        background-color: rgba(41, 128, 185, 0.8); /* Add transparency to the background color */
+    }
+</style>
+</head>
+<body>
+
+<div class="button-container">
+    <button class="button" onclick="redirectToAppointments()">Add Appointments</button>
+    <button class="button" onclick="redirectToPatientDetails()">Add Patient Details</button>
+</div>
+
+<script>
+    function redirectToAppointments() {
+        window.location.href = 'addapp.html';
+    }
+
+    function redirectToPatientDetails() {
+        window.location.href = 'addpat.html';
+    }
+</script>
+
+</body>
+</html>

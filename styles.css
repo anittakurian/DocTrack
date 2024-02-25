@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://media.istockphoto.com/id/1318410710/photo/blur-abstract-background-from-office-modern-light-spacious-business-room.jpg?s=612x612&w=0&k=20&c=AXR5s0gN8t70zNku3fHM018XTburJN42PdfoH3FWGo0='); /* Specify the path to your background image */
+    background-size: cover;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.left-section {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.right-section {
+    margin-left: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#calendar {
+    width: 250px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.highlighted-date {
+    background-color: #ffcc00; /* Yellow */
+    color: #fff; /* White text color */
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set container height to full viewport height */
+}
+
+.left-section, .right-section {
+    width: 50%;
+    padding: 20px;
+}
+
+.left-section {
+    text-align: center; /* Center text in left section */
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically in right section */
+}
+
+.calendar-container {
+    margin-top: 20px; /* Add some space between Today's Appointment and calendar */
+}
+
+/* Rest of your CSS styles... */
+
+
+

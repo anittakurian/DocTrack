@@ -1,0 +1,57 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-image {
+    background-image: url('https://www.shutterstock.com/image-photo/blurred-background-interior-modern-hospital-600nw-1919329166.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: rgb(19, 19, 19);
+    font-size: 45px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f9fdff;
+    cursor: pointer;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(10, 11, 11);
+    display: block;
+    font-size: 30px;
+    padding: 10px;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
