@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor's Appointment Schedule</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="background-image"></div>
+<div class="container">
+    <div class="left-section">
+        <h2>Today's Appointments</h2>
+        <ul id="appointments-list">
+            <!-- Appointments will be dynamically added here -->
+        </ul>
+    </div>
+    <div class="right-section">
+        <div class="calendar-container">
+            <div class="month-navigation">
+                <button id="prev-month-btn">&lt;</button>
+                <span id="current-month-year"></span>
+                <button id="next-month-btn">&gt;</button>
+            </div>
+            <div id="calendar"></div>
+        </div>
+    </div>
+</div>
+
+<script src="calendar.js"></script>
+</body>
+</html>

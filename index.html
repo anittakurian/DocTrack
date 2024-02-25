@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DocTrack</title>
+<style>
+   body {
+    font-family: Algerian, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db; /* blue background */
+    color: #3498db; 
+    background-image: url('https://www.shutterstock.com/image-photo/blurred-background-interior-modern-hospital-600nw-1919329166.jpg'); /* Path to your hospital background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+
+  }
+
+  .buttons {
+    margin-top: 50px;
+  }
+
+  .buttons button {
+    background-color: #2980b9; /* darker blue for buttons */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .buttons button:hover {
+    background-color: #1e679b; /* darker shade on hover */
+  }
+
+  .login-container {
+    display: none;
+    margin-top: 30px;
+  }
+
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .login-container input[type="submit"] {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .login-container input[type="submit"]:hover {
+    background-color: #1e679b;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="title">DocTrack</div>
+  <div class="buttons">
+    <button onclick="showDoctorLogin()">Doctor Login</button>
+    <button onclick="showAdminLogin()">Admin Login</button>
+  </div>
+
+  <!-- Doctor Login Form -->
+  <div id="doctorLogin" class="login-container">
+    <form id="doctorLoginForm" onsubmit="return submitDoctorLoginForm()" action="doctor.html" method="POST">
+      <input type="text" name="doctor_id" placeholder="Doctor ID" required><br>
+      <input type="password" name="doctor_password" placeholder="Password" required><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <!-- Admin Login Form -->
+  <div id="adminLogin" class="login-container">
+    <form id="adminLoginForm" onsubmit="return submitAdminLoginForm()" action="admin.html" method="POST">
+      <input type="text" name="admin_id" placeholder="Admin ID" required><br>
+      <input type="password" name="admin_password" placeholder="Password" required><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</div>
+
+<script>
+  function showDoctorLogin() {
+    document.getElementById('doctorLogin').style.display = 'block';
+    document.getElementById('adminLogin').style.display = 'none';
+  }
+
+  function showAdminLogin() {
+    document.getElementById('doctorLogin').style.display = 'none';
+    document.getElementById('adminLogin').style.display = 'block';
+  }
+
+  function submitDoctorLoginForm() {
+    // Redirect to a new webpage after form submission
+    window.location.href = "doctor.html";
+    return false; // Prevent the form from submitting in case JavaScript is disabled
+  }
+
+  function submitAdminLoginForm() {
+    // Redirect to a new webpage after form submission
+    window.location.href = "admin.html";
+    return false; // Prevent the form from submitting in case JavaScript is disabled
+  }
+</script>
+
+</body>
+</html>

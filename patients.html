@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient List</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="background-image">
+        <div class="header">
+            <h1>Patient List</h1>
+        </div>
+        <ul id="patientList">
+            <li><a href="index5.html">Jane Smith</a></li>
+            <li><a href="index6.html">Michael Johnson</a></li>
+            <li><a href="index3.html">Emily Wilson</a></li>
+            <li><a href="index1.html">Alakanandha S</a></li>
+            <li><a href="index8.html">Zachariah Joseph</a></li>
+            <li><a href="index2.html">Deepika Sukumar</a></li>
+            <li><a href="index7.html">Raghav Menon</a></li>
+        </ul>
+    </div>
+
+    <script>
+       
+        const patientList = document.getElementById('patientList');
+
+        
+        const listItems = Array.from(patientList.getElementsByTagName('li'));
+
+       
+        listItems.sort((a, b) => {
+            const nameA = a.textContent.trim().toUpperCase();
+            const nameB = b.textContent.trim().toUpperCase();
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+
+      
+        patientList.innerHTML = '';
+
+        listItems.forEach(item => {
+            patientList.appendChild(item);
+        });
+    </script>
+</body>
+</html>

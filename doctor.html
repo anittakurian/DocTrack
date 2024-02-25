@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Dashboard</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/783/379/large_2x/blur-hospital-background-free-photo.jpg'); /* Replace 'background-photo.jpg' with the path to your background photo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .box {
+    flex: 1;
+    margin: 20px;
+    padding: 40px;
+    background-color: rgba(52, 152, 219, 0.8); /* Adding transparency to the background color */
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .box:hover {
+    transform: scale(1.05);
+  }
+
+  .box h2 {
+    margin-top: 0;
+  }
+
+  .box p {
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box" onclick="navigateToProfile()">
+    <h2>Profile</h2>
+    <p>Click to view your profile</p>
+  </div>
+  <div class="box" onclick="navigateToPatients()">
+    <h2>Patients</h2>
+    <p>Click to view patient records</p>
+  </div>
+  <div class="box" onclick="navigateToAppointments()">
+    <h2>Appointments</h2>
+    <p>Click to view appointments</p>
+  </div>
+</div>
+
+<script>
+  function navigateToProfile() {
+    window.location.href = "profile.html"; // Replace with actual URL of profile page
+  }
+
+  function navigateToPatients() {
+    window.location.href = "patients.html"; // Replace with actual URL of patients page
+  }
+
+  function navigateToAppointments() {
+    window.location.href = "appointments.html"; // Replace with actual URL of appointments page
+  }
+</script>
+
+</body>
+</html>
