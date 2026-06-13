@@ -1,4 +1,10 @@
+<p align="center">
+  <img src="./screenshots/logo.png" alt="DocTrack Logo" width="400" style="border-radius: 15px;" />
+</p>
+
+
 # DocTrack
+
 
 DocTrack is a secure, multi-tenant Patient Data Management System and Electronic Medical Record (EMR) portal designed for independent clinics and practitioners. The platform establishes isolated clinical workspaces, enabling secure patient registration, structured visit timeline tracking, and media document storage.
 
