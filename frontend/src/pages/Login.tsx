@@ -64,7 +64,7 @@ export const Login: React.FC = () => {
                 <Input
                   id="username"
                   label="Username"
-                  placeholder="dr_sravan"
+                  placeholder="dr_john"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="pl-10"
