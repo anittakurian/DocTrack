@@ -1,37 +1,58 @@
-# DocTrack 🩺
+# DocTrack
 
-DocTrack is a full-stack, professional **Patient Data & Electronic Medical Records (EMR) Management System** designed specifically for doctors and small clinics. 
+DocTrack is a secure, multi-tenant Patient Data Management System and Electronic Medical Record (EMR) portal designed for independent clinics and practitioners. The platform establishes isolated clinical workspaces, enabling secure patient registration, structured visit timeline tracking, and media document storage.
 
-It provides patient demographic registration, appointment scheduling, EMR timeline logs, drag-and-drop document vaults, and AI-assisted clinical note formatting, history summaries, and multimodal OCR report extraction.
+DocTrack includes an integrated clinical assistant pipeline powered by Large Language Models (LLMs) to automate structured SOAP note formatting, history timelines synthesis, and lab report optical character recognition (OCR).
 
 ---
 
-## 📸 Interface Preview (Visual Mockups)
+## Interface Preview
 
 *Explore the user interface screens of DocTrack:*
 
-### 1. Authentication & Dashboard
-| Login Screen | Clinical Dashboard |
-| :---: | :---: |
-| ![Login Screen](./screenshots/login.png) <br> *Secure practitioner entrance* | ![Dashboard](./screenshots/dashboard.png) <br> *Real-time statistics & upcoming consultations* |
-
-### 2. Patient Directory & EMR Records
-| Patient Directory | Patient Registration |
-| :---: | :---: |
-| ![Patient Directory](./screenshots/all_patients.png) <br> *Patient roster with search and status* | ![Patient Registration](./screenshots/reg_new_patient.png) <br> *Demographics entry form* |
-
-| Patient EMR History & Timeline | Clinical AI Summary |
-| :---: | :---: |
-| ![Patient EMR Details](./screenshots/patient_details.png) <br> *Visit timeline logs & attachment uploads* | ![AI Summary](./screenshots/ai_summary.png) <br> *Synthesized clinical history review* |
-
-### 3. Consultation Queue
-| Appointments Calendar |
-| :---: |
-| ![Appointments Calendar](./screenshots/appointments.png) <br> *Coordinate scheduled, completed, and cancelled visits* |
+### Secure Login Screen
+![Login Screen](./screenshots/login.png)
+*Secure practitioner entrance to access doctor-owned patient files.*
 
 ---
 
-## 🚀 Key Features
+### Clinical Dashboard
+![Dashboard](./screenshots/dashboard.png)
+*Real-time statistics metrics showing total patients, today's appointments, completed visits, and active consultation queues.*
+
+---
+
+### Patient EMR Directory
+![Patient Directory](./screenshots/all_patients.png)
+*Roster view of all active clinic patient files with search and gender filtering.*
+
+---
+
+### Patient Registration Form
+![Patient Registration](./screenshots/reg_new_patient.png)
+*Demographics entry card to register new patients and collect contact details.*
+
+---
+
+### Patient EMR History & Timeline
+![Patient EMR Details](./screenshots/patient_details.png)
+*Comprehensive visit timeline displaying symptoms, diagnoses, prescriptions, and media attachment vaults.*
+
+---
+
+### Clinical AI Summary Panel
+![AI Summary](./screenshots/ai_summary.png)
+*Synthesized EMR clinical history overview generated dynamically.*
+
+---
+
+### Appointments Calendar
+![Appointments Calendar](./screenshots/appointments.png)
+*List view to schedule, reschedule, complete, or cancel patient visits.*
+
+---
+
+## Key Features
 
 *   **Secure Doctor Authentication**: JWT-based session controls (`djangorestframework-simplejwt`).
 *   **Strict Tenancy Isolation**: Multi-doctor isolation ensures each practitioner can only query, modify, or view their own registered patients and appointments.
@@ -46,7 +67,7 @@ It provides patient demographic registration, appointment scheduling, EMR timeli
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend
 *   **Django 5.x** & **Django REST Framework (DRF)**
@@ -65,7 +86,7 @@ It provides patient demographic registration, appointment scheduling, EMR timeli
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 
 ```text
 DocTrack/
@@ -86,16 +107,17 @@ DocTrack/
     └── .env.example         # Client API url template
 ```
 
+
 ---
 
-## 💻 Local Quick Start
+## Local Quick Start
 
 ### Prerequisites
 *   Python 3.11+
 *   Node.js 18+ & npm
 
 ### 1. Backend Setup
-1. Open a terminal and navigate to the project directory:
+1. Navigate to the backend directory:
    ```bash
    cd backend
    ```
@@ -113,22 +135,21 @@ DocTrack/
    ```
 4. Configure environment secrets:
    * Copy `.env.example` to `.env`
-   * *(Optional)* Fill in your `GEMINI_API_KEY` for AI features and `CLOUDINARY_*` details for document uploads. Leaving them blank triggers the automatic mock fallbacks.
-5. Build the database and run migrations:
+   * *(Optional)* Add a `GEMINI_API_KEY` or Cloudinary keys. If left blank, mock engines will run automatically.
+5. Apply database migrations:
    ```bash
-   python manage.py makemigrations
    python manage.py migrate
    ```
 6. Start the API server:
    ```bash
    python manage.py runserver
    ```
-   The API will run at `http://localhost:8000/`. You can view Swagger documentation at `http://localhost:8000/api/schema/swagger-ui/`.
+   The Swagger OpenAPI specifications are accessible at `http://localhost:8000/api/schema/swagger-ui/`.
 
 ---
 
 ### 2. Frontend Setup
-1. Open a new terminal and navigate to the client folder:
+1. Navigate to the frontend directory:
    ```bash
    cd frontend
    ```
@@ -138,47 +159,22 @@ DocTrack/
    ```
 3. Configure environment variables:
    * Copy `.env.example` to `.env`
-   * Verify it points to the local backend: `VITE_API_URL=http://localhost:8000`
-4. Start the Vite development hot-reload server:
+4. Start the local client development server:
    ```bash
    npm run dev
    ```
-   Open your browser and navigate to `http://localhost:5173`.
 
 ---
 
-## 🌐 Production Deployment Guide
+## Live Deployment
 
-### Database (Neon PostgreSQL)
-1. Provision a database on [Neon.tech](https://neon.tech/).
-2. Copy your Connection String (`DATABASE_URL`).
-
-### Storage (Cloudinary)
-1. Sign up on [Cloudinary.com](https://cloudinary.com/) and retrieve your **Cloud Name**, **API Key**, and **API Secret**.
-
-### Backend (Render Web Service)
-*   **Root Directory**: `backend`
-*   **Build Command**: `pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate`
-*   **Start Command**: `gunicorn doctrack.wsgi`
-*   **Environment Variables**:
-    *   `SECRET_KEY`: *[Secure random string]*
-    *   `DEBUG`: `False`
-    *   `DATABASE_URL`: *[Your Neon Connection String]*
-    *   `ALLOWED_HOSTS`: `[your-render-subdomain].onrender.com`
-    *   `CLOUDINARY_CLOUD_NAME`: *[Cloud Name]*
-    *   `CLOUDINARY_API_KEY`: *[API Key]*
-    *   `CLOUDINARY_API_SECRET`: *[API Secret]*
-    *   `GEMINI_API_KEY`: *[Your Gemini API Key]*
-
-### Frontend (Vercel SPA Project)
-*   **Root Directory**: `frontend`
-*   **Framework Preset**: `Vite`
-*   **Build Command**: `npm run build`
-*   **Output Directory**: `dist`
-*   **Environment Variable**:
-    *   `VITE_API_URL`: `https://[your-render-subdomain].onrender.com` (Your backend Render URL)
+The system is configured for cloud environments and deployed on the following infrastructure:
+*   **Backend API**: Python WSGI server served by **Render**
+*   **Frontend Client**: Single Page Application (SPA) served by **Vercel**
+*   **Database**: Managed PostgreSQL instance provisioned on **Neon**
+*   **Medical Document Vault**: File storage API managed by **Cloudinary**
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the MIT License.
