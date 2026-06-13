@@ -6,7 +6,7 @@ DocTrack includes an integrated clinical assistant pipeline powered by Large Lan
 
 ---
 
-## Interface Preview
+## User Interface Preview
 
 *Explore the user interface screens of DocTrack:*
 
