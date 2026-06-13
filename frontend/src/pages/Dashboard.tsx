@@ -157,7 +157,7 @@ export const Dashboard: React.FC = () => {
               <ArrowRight size={14} />
             </Link>
           </CardHeader>
-          <CardContent className="divide-y divide-border -mx-5 -my-5 px-5">
+          <CardContent className="divide-y divide-border">
             {data?.upcoming_appointments && data.upcoming_appointments.length > 0 ? (
               data.upcoming_appointments.map((apt) => (
                 <div key={apt.id} className="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 first:pt-5 last:pb-5">
@@ -219,7 +219,7 @@ export const Dashboard: React.FC = () => {
               <ArrowRight size={14} />
             </Link>
           </CardHeader>
-          <CardContent className="divide-y divide-border -mx-5 -my-5 px-5">
+          <CardContent className="divide-y divide-border">
             {data?.recent_patients && data.recent_patients.length > 0 ? (
               data.recent_patients.map((pat) => (
                 <div key={pat.id} className="py-4 flex items-center justify-between first:pt-5 last:pb-5">
