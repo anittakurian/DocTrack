@@ -1,0 +1,39 @@
+# Virtual Environment
+venv/
+ENV/
+.venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Django local settings / db
+db.sqlite3
+db.sqlite3-journal
+local_settings.py
+media/
+staticfiles/
+
+# Node/Vite build output and dependencies
+node_modules/
+dist/
+dist-ssr/
+*.local
+.eslintcache
+.parcel-cache
+
+# Environment variables
+.env
+.env*.local
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+detes.txt
