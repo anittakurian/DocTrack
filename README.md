@@ -8,14 +8,26 @@ It provides patient demographic registration, appointment scheduling, EMR timeli
 
 ## 📸 Interface Preview (Visual Mockups)
 
+*Explore the user interface screens of DocTrack:*
 
-| Dashboard | Patient Timeline |
+### 1. Authentication & Dashboard
+| Login Screen | Clinical Dashboard |
 | :---: | :---: |
-| ![Dashboard Mockup](https://raw.githubusercontent.com/anittakurian/DocTrack/main/frontend/public/favicon.svg) <br> *Sleek metrics dashboard* | ![Patient Detail Mockup](https://raw.githubusercontent.com/anittakurian/DocTrack/main/frontend/public/favicon.svg) <br> *EMR consultation notes and logs* |
+| ![Login Screen](./screenshots/login.png) <br> *Secure practitioner entrance* | ![Dashboard](./screenshots/dashboard.png) <br> *Real-time statistics & upcoming consultations* |
 
-| AI Assistant Composer | Document OCR Extractor |
+### 2. Patient Directory & EMR Records
+| Patient Directory | Patient Registration |
 | :---: | :---: |
-| ![AI Composer Mockup](https://raw.githubusercontent.com/anittakurian/DocTrack/main/frontend/public/favicon.svg) <br> *SOAP clinical note formatter* | ![OCR Mockup](https://raw.githubusercontent.com/anittakurian/DocTrack/main/frontend/public/favicon.svg) <br> *Prescription data extractor* |
+| ![Patient Directory](./screenshots/all_patients.png) <br> *Patient roster with search and status* | ![Patient Registration](./screenshots/reg_new_patient.png) <br> *Demographics entry form* |
+
+| Patient EMR History & Timeline | Clinical AI Summary |
+| :---: | :---: |
+| ![Patient EMR Details](./screenshots/patient_details.png) <br> *Visit timeline logs & attachment uploads* | ![AI Summary](./screenshots/ai_summary.png) <br> *Synthesized clinical history review* |
+
+### 3. Consultation Queue
+| Appointments Calendar |
+| :---: |
+| ![Appointments Calendar](./screenshots/appointments.png) <br> *Coordinate scheduled, completed, and cancelled visits* |
 
 ---
 
