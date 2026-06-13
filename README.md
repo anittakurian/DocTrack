@@ -8,7 +8,6 @@ It provides patient demographic registration, appointment scheduling, EMR timeli
 
 ## 📸 Interface Preview (Visual Mockups)
 
-*Add screenshots of your running application here to showcase the premium UI design.*
 
 | Dashboard | Patient Timeline |
 | :---: | :---: |
